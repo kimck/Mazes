@@ -1,0 +1,106 @@
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2008
+
+Project("{E1421BFD-D8C9-638D-CBB7-9C9F0554DBCF}") = "MouseVR", "Assembly-CSharp-firstpass.csproj", "{6F631B9E-17B3-1914-A933-62EF3AB95A7C}"
+EndProject
+Project("{E1421BFD-D8C9-638D-CBB7-9C9F0554DBCF}") = "MouseVR", "Assembly-CSharp.csproj", "{2212A493-1F43-414C-50F7-94466AC64983}"
+EndProject
+Project("{E1421BFD-D8C9-638D-CBB7-9C9F0554DBCF}") = "MouseVR", "Assembly-CSharp-Editor.csproj", "{E502A1AE-16CB-992D-7B69-CE291627F849}"
+EndProject
+Project("{E1421BFD-D8C9-638D-CBB7-9C9F0554DBCF}") = "MouseVR", "Assembly-UnityScript-firstpass.unityproj", "{8A6F5D61-0353-87FB-9B4A-2E083A274B13}"
+EndProject
+Project("{E1421BFD-D8C9-638D-CBB7-9C9F0554DBCF}") = "MouseVR", "Assembly-UnityScript.unityproj", "{D0645C07-C845-CBD3-BE11-65F406815D14}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6F631B9E-17B3-1914-A933-62EF3AB95A7C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6F631B9E-17B3-1914-A933-62EF3AB95A7C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6F631B9E-17B3-1914-A933-62EF3AB95A7C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6F631B9E-17B3-1914-A933-62EF3AB95A7C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2212A493-1F43-414C-50F7-94466AC64983}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2212A493-1F43-414C-50F7-94466AC64983}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2212A493-1F43-414C-50F7-94466AC64983}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2212A493-1F43-414C-50F7-94466AC64983}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E502A1AE-16CB-992D-7B69-CE291627F849}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E502A1AE-16CB-992D-7B69-CE291627F849}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E502A1AE-16CB-992D-7B69-CE291627F849}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E502A1AE-16CB-992D-7B69-CE291627F849}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8A6F5D61-0353-87FB-9B4A-2E083A274B13}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8A6F5D61-0353-87FB-9B4A-2E083A274B13}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8A6F5D61-0353-87FB-9B4A-2E083A274B13}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8A6F5D61-0353-87FB-9B4A-2E083A274B13}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D0645C07-C845-CBD3-BE11-65F406815D14}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D0645C07-C845-CBD3-BE11-65F406815D14}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D0645C07-C845-CBD3-BE11-65F406815D14}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D0645C07-C845-CBD3-BE11-65F406815D14}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+																																																																																																																																																																																																																													GlobalSection(MonoDevelopProperties) = preSolution
+=======
+																																																																																																																																																																																																																	GlobalSection(MonoDevelopProperties) = preSolution
+>>>>>>> Stashed changes
+=======
+																																																																																																																																																																																																														GlobalSection(MonoDevelopProperties) = preSolution
+>>>>>>> Stashed changes
+=======
+																																																																																																																																																																																																																		GlobalSection(MonoDevelopProperties) = preSolution
+=======
+																																																																																																																																																																																																																	GlobalSection(MonoDevelopProperties) = preSolution
+>>>>>>> Stashed changes
+>>>>>>> Stashed changes
+=======
+																																																																																																																																																																																																												GlobalSection(MonoDevelopProperties) = preSolution
+>>>>>>> Stashed changes
+=======
+																																																																																																																																																																																																										GlobalSection(MonoDevelopProperties) = preSolution
+>>>>>>> Stashed changes
+=======
+																																																																																																																																																																																																						GlobalSection(MonoDevelopProperties) = preSolution
+>>>>>>> Stashed changes
+=======
+<<<<<<< Updated upstream
+																																																																																																																																																																																															GlobalSection(MonoDevelopProperties) = preSolution
+=======
+																																																																																																																																																																																												GlobalSection(MonoDevelopProperties) = preSolution
+>>>>>>> Stashed changes
+>>>>>>> Stashed changes
+=======
+																																																																																																																																																																																			GlobalSection(MonoDevelopProperties) = preSolution
+>>>>>>> Stashed changes
+=======
+																																																																																													GlobalSection(MonoDevelopProperties) = preSolution
+>>>>>>> Stashed changes
+=======
+																																																																																																				GlobalSection(MonoDevelopProperties) = preSolution
+>>>>>>> Stashed changes
+<<<<<<< Updated upstream
+
+																																														GlobalSection(MonoDevelopProperties) = preSolution
+>>>>>>> Stashed changes
+=======
+>>>>>>> Stashed changes
+		StartupItem = Assembly-CSharp.csproj
+		Policies = $0
+		$0.TextStylePolicy = $1
+		$1.inheritsSet = null
+		$1.scope = text/x-csharp
+		$0.CSharpFormattingPolicy = $2
+		$2.inheritsSet = Mono
+		$2.inheritsScope = text/x-csharp
+		$2.scope = text/x-csharp
+		$0.TextStylePolicy = $3
+		$3.FileWidth = 120
+		$3.TabWidth = 4
+		$3.EolMarker = Unix
+		$3.inheritsSet = Mono
+		$3.inheritsScope = text/plain
+		$3.scope = text/plain
+	EndGlobalSection
+
+EndGlobal
