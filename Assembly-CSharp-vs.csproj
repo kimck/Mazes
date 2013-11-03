@@ -5,7 +5,7 @@
 	<Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
 	<ProductVersion>10.0.20506</ProductVersion>
 	<SchemaVersion>2.0</SchemaVersion>
-	<ProjectGuid>{2212A493-1F43-414C-50F7-94466AC64983}</ProjectGuid>
+	<ProjectGuid>{917913F7-F5EC-49AF-E4B9-F6A734A84687}</ProjectGuid>
 	<OutputType>Library</OutputType>
 	<AppDesignerFolder>Properties</AppDesignerFolder>
 	<RootNamespace></RootNamespace>
@@ -18,7 +18,7 @@
 	<DebugType>full</DebugType>
 	<Optimize>false</Optimize>
 	<OutputPath>Temp\bin\Debug\</OutputPath>
-	<DefineConstants>DEBUG;TRACE;UNITY_STANDALONE_WIN;ENABLE_MICROPHONE;ENABLE_TEXTUREID_MAP;ENABLE_AUDIO_FMOD;UNITY_STANDALONE;ENABLE_MONO;ENABLE_TERRAIN;ENABLE_SUBSTANCE;ENABLE_GENERICS;ENABLE_MOVIES;ENABLE_WWW;ENABLE_IMAGEEFFECTS;ENABLE_WEBCAM;RENDER_SOFTWARE_CURSOR;ENABLE_NETWORK;ENABLE_PHYSICS;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_SHADOWS;ENABLE_AUDIO;ENABLE_DUCK_TYPING;ENABLE_SINGLE_INSTANCE_BUILD_SETTING;UNITY_4_2_0;UNITY_4_2;UNITY_64;ENABLE_PROFILER;UNITY_EDITOR;UNITY_EDITOR_OSX</DefineConstants>
+	<DefineConstants>DEBUG;TRACE;UNITY_STANDALONE_WIN;ENABLE_MICROPHONE;ENABLE_TEXTUREID_MAP;ENABLE_AUDIO_FMOD;UNITY_STANDALONE;ENABLE_MONO;ENABLE_TERRAIN;ENABLE_SUBSTANCE;ENABLE_GENERICS;ENABLE_MOVIES;ENABLE_WWW;ENABLE_IMAGEEFFECTS;ENABLE_WEBCAM;RENDER_SOFTWARE_CURSOR;ENABLE_NETWORK;ENABLE_PHYSICS;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_SHADOWS;ENABLE_AUDIO;ENABLE_DUCK_TYPING;ENABLE_SINGLE_INSTANCE_BUILD_SETTING;UNITY_4_2_2;UNITY_4_2;UNITY_64;ENABLE_PROFILER;UNITY_EDITOR;UNITY_EDITOR_OSX</DefineConstants>
 	<ErrorReport>prompt</ErrorReport>
 	<WarningLevel>4</WarningLevel>
 	<NoWarn>0169</NoWarn>
@@ -44,31 +44,28 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\MouseVR Assets\Scripts\Context_Fear_Test.cs" />
-     <Compile Include="Assets\MouseVR Assets\Scripts\Context_Fear_Train.cs" />
-     <Compile Include="Assets\MouseVR Assets\Scripts\Context_Fear_Train_Auditory.cs" />
-     <Compile Include="Assets\MouseVR Assets\Scripts\CorrectChoiceTrigger.cs" />
-     <Compile Include="Assets\MouseVR Assets\Scripts\CorrectChoiceTrigger_ForcedChoice.cs" />
-     <Compile Include="Assets\MouseVR Assets\Scripts\ExternalTrigger.cs" />
-     <Compile Include="Assets\MouseVR Assets\Scripts\GameData.cs" />
-     <Compile Include="Assets\MouseVR Assets\Scripts\IncorrectChoiceTrigger.cs" />
-     <Compile Include="Assets\MouseVR Assets\Scripts\IncorrectChoiceTrigger_ForcedChoice.cs" />
-     <Compile Include="Assets\MouseVR Assets\Scripts\LevelData.cs" />
-     <Compile Include="Assets\MouseVR Assets\Scripts\LevelMenuInteraction.cs" />
-     <Compile Include="Assets\MouseVR Assets\Scripts\LiveMouseController.cs" />
-     <Compile Include="Assets\MouseVR Assets\Scripts\LiveMouseController_ForcedChoice.cs" />
-     <Compile Include="Assets\MouseVR Assets\Scripts\MainMenuGUI.cs" />
-     <Compile Include="Assets\MouseVR Assets\Scripts\NewBehaviourScript.cs" />
-     <Compile Include="Assets\MouseVR Assets\Scripts\OpenFieldRewards.cs" />
-     <Compile Include="Assets\MouseVR Assets\Scripts\SaveLocation.cs" />
-     <Compile Include="Assets\MouseVR Assets\Scripts\SaveLocation_Fear_Test.cs" />
-     <Compile Include="Assets\MouseVR Assets\Scripts\SaveLocation_Fear_Train.cs" />
-     <Compile Include="Assets\MouseVR Assets\Scripts\SaveLocation_ForcedChoice.cs" />
-     <Compile Include="Assets\MouseVR Assets\Scripts\SaveLocation_OpenFieldReward.cs" />
-     <Compile Include="Assets\MouseVR Assets\Scripts\SaveLocation_OpenFieldReward_Auditory.cs" />
-     <Compile Include="Assets\MouseVR Assets\Scripts\SaveLocation_Stimulus.cs" />
-     <Compile Include="Assets\MouseVR Assets\Scripts\Stimulus.cs" />
-     <Compile Include="Assets\MouseVR Assets\Scripts\StimulusRestart.cs" />
+     <Compile Include="Assets\Mazes Assets\Scripts\Context_Fear_Test.cs" />
+     <Compile Include="Assets\Mazes Assets\Scripts\Context_Fear_Train.cs" />
+     <Compile Include="Assets\Mazes Assets\Scripts\Context_Fear_Train_Auditory.cs" />
+     <Compile Include="Assets\Mazes Assets\Scripts\CorrectChoiceTrigger.cs" />
+     <Compile Include="Assets\Mazes Assets\Scripts\GameData.cs" />
+     <Compile Include="Assets\Mazes Assets\Scripts\IncorrectChoiceTrigger.cs" />
+     <Compile Include="Assets\Mazes Assets\Scripts\LTrack_RestartTrigger.cs" />
+     <Compile Include="Assets\Mazes Assets\Scripts\LTrack_RewardTrigger.cs" />
+     <Compile Include="Assets\Mazes Assets\Scripts\LevelData.cs" />
+     <Compile Include="Assets\Mazes Assets\Scripts\LevelMenuInteraction.cs" />
+     <Compile Include="Assets\Mazes Assets\Scripts\LiveMouseController.cs" />
+     <Compile Include="Assets\Mazes Assets\Scripts\MainMenuGUI.cs" />
+     <Compile Include="Assets\Mazes Assets\Scripts\OpenFieldRewards.cs" />
+     <Compile Include="Assets\Mazes Assets\Scripts\SaveLocation.cs" />
+     <Compile Include="Assets\Mazes Assets\Scripts\SaveLocation_Fear_Test.cs" />
+     <Compile Include="Assets\Mazes Assets\Scripts\SaveLocation_Fear_Train.cs" />
+     <Compile Include="Assets\Mazes Assets\Scripts\SaveLocation_LTrack.cs" />
+     <Compile Include="Assets\Mazes Assets\Scripts\SaveLocation_OpenFieldReward.cs" />
+     <Compile Include="Assets\Mazes Assets\Scripts\SaveLocation_OpenFieldReward_Auditory.cs" />
+     <Compile Include="Assets\Mazes Assets\Scripts\SaveLocation_Stimulus.cs" />
+     <Compile Include="Assets\Mazes Assets\Scripts\Stimulus.cs" />
+     <Compile Include="Assets\Mazes Assets\Scripts\StimulusRestart.cs" />
      <None Include="Assets\Resources\SyphonShaders\Particle AddSmooth.shader" />
      <None Include="Assets\Resources\SyphonShaders\AlphaTest-BumpSpec01.shader" />
      <None Include="Assets\Resources\SyphonShaders\Particle AddBehind.shader" />
@@ -105,7 +102,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Assembly-CSharp-firstpass-vs.csproj">
-      <Project>{6F631B9E-17B3-1914-A933-62EF3AB95A7C}</Project>      <Name>Assembly-CSharp-firstpass-vs</Name>    </ProjectReference>
+      <Project>{24E91079-2848-C4C6-9AC5-304A1B588E97}</Project>      <Name>Assembly-CSharp-firstpass-vs</Name>    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -170,4 +170,3 @@ if __name__ == "__main__":
         toc = time.clock() - tic
         print "Server ran for ", toc, "seconds."
     sys.exit(0)
-
