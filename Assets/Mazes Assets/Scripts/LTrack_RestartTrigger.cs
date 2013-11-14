@@ -51,7 +51,7 @@ public class LTrack_RestartTrigger : MonoBehaviour {
 	void Update () {		
 		if (LTrack_RewardTrigger.outcome == "'restart'" || LTrack_RewardTrigger.outcome == "'incorrect'") {
 			LTrack_RewardTrigger.runningtrialtime=0;
-			StartCoroutine (DelayRestartMaze(10.0f));
+			StartCoroutine (DelayRestartMaze(6.0f));
 		}
 	}
 }

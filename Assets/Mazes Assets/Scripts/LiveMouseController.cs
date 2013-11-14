@@ -21,7 +21,7 @@ public class LiveMouseController : MonoBehaviour {
 
 	void Update() {
 		
-		Vector3 directionVector = new Vector3(0, 0, -Input.GetAxis ("Mouse X") * linearSensitivity);
+		Vector3 directionVector = new Vector3(0, 0, Input.GetAxis ("Mouse X") * linearSensitivity);
 		motor.inputMoveDirection = transform.rotation * directionVector;
 		transform.Rotate(0, Input.GetAxis("Mouse Y") * angularSensitivity, 0);
 		
