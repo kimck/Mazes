@@ -73,7 +73,7 @@ public class LTrack_RewardTrigger : MonoBehaviour {
 		
 		if (outcome == "'correct'") {
 			runningtrialtime=0;
-			StartCoroutine (DelayRestartMaze(3.0f));
+			StartCoroutine (DelayRestartMaze(5.0f));
 		}
 	}
 }
