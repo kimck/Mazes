@@ -11,7 +11,12 @@ public class LTrack_RewardTrigger : MonoBehaviour {
 	public static float runningtrialtime = 0;
 	public GameObject player;
 	public float nextmaze;
-
+	
+	// For imaging with morphing/switching
+	public int[] run1 = {0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,2,2,2,2,2,3,3,3,3,3};
+	public int[] run2 = {0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,2,2,2,2,2,3,3,3,3,3};
+	public int[] run3 = {0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,2,2,2,2,2,3,3,3,3,3};
+	
 	// Use this for initialization
 	void Start () {
 		player = GameObject.Find ("LiveMouseFPSController");
