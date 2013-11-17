@@ -2,11 +2,9 @@
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Mazes Assets/Scripts/SaveLocation_LTrack_Switching.cs">
     <Files>
-      <File FileName="../MouseVR/Assets/MouseVR Assets/Scripts/Stimulus_NoNeutral.cs" Line="444" Column="20" />
-      <File FileName="../MouseVR/Assets/MouseVR Assets/Scripts/SwitchMaze.cs" Line="14" Column="2" />
-      <File FileName="Assets/Mazes Assets/Scripts/SaveLocation_LTrack_Switching.cs" Line="94" Column="27" />
-      <File FileName="Assets/Mazes Assets/Scripts/LTrack_RewardTrigger_Switching.cs" Line="14" Column="16" />
-      <File FileName="Assets/Mazes Assets/Scripts/LTrack_RestartTrigger_Switching.cs" Line="107" Column="34" />
+      <File FileName="Assets/Mazes Assets/Scripts/LTrack_RestartTrigger_Switching.cs" Line="18" Column="22" />
+      <File FileName="Assets/Mazes Assets/Scripts/LTrack_RewardTrigger_Switching.cs" Line="160" Column="23" />
+      <File FileName="Assets/Mazes Assets/Scripts/SaveLocation_LTrack_Switching.cs" Line="55" Column="49" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
