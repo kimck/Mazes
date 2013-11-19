@@ -53,6 +53,7 @@
      <None Include="Assets\Resources\SyphonShaders\Alpha-BumpSpec01.shader" />
      <None Include="Assets\Resources\SyphonShaders\Alpha-ParallaxSpec01.shader" />
      <None Include="Assets\Resources\SyphonShaders\Alpha-Diffuse01.shader" />
+     <None Include="Assets\Resources\SyphonShaders\Unlit-Transparent-Custom.shader" />
      <None Include="Assets\Resources\SyphonShaders\AlphaTest-Glossy01.shader" />
      <None Include="Assets\Resources\SyphonShaders\Particle MultiplyDouble.shader" />
      <None Include="Assets\Resources\SyphonShaders\Particle AddMultiply.shader" />

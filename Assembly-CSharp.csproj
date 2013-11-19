@@ -51,8 +51,10 @@
      <Compile Include="Assets\Mazes Assets\Scripts\GameData.cs" />
      <Compile Include="Assets\Mazes Assets\Scripts\IncorrectChoiceTrigger.cs" />
      <Compile Include="Assets\Mazes Assets\Scripts\LTrack_RestartTrigger.cs" />
+     <Compile Include="Assets\Mazes Assets\Scripts\LTrack_RestartTrigger_Morphing.cs" />
      <Compile Include="Assets\Mazes Assets\Scripts\LTrack_RestartTrigger_Switching.cs" />
      <Compile Include="Assets\Mazes Assets\Scripts\LTrack_RewardTrigger.cs" />
+     <Compile Include="Assets\Mazes Assets\Scripts\LTrack_RewardTrigger_Morphing.cs" />
      <Compile Include="Assets\Mazes Assets\Scripts\LTrack_RewardTrigger_Switching.cs" />
      <Compile Include="Assets\Mazes Assets\Scripts\LevelData.cs" />
      <Compile Include="Assets\Mazes Assets\Scripts\LevelMenuInteraction.cs" />
@@ -63,12 +65,16 @@
      <Compile Include="Assets\Mazes Assets\Scripts\SaveLocation_Fear_Test.cs" />
      <Compile Include="Assets\Mazes Assets\Scripts\SaveLocation_Fear_Train.cs" />
      <Compile Include="Assets\Mazes Assets\Scripts\SaveLocation_LTrack.cs" />
+     <Compile Include="Assets\Mazes Assets\Scripts\SaveLocation_LTrack_Morphing.cs" />
      <Compile Include="Assets\Mazes Assets\Scripts\SaveLocation_LTrack_Switching.cs" />
      <Compile Include="Assets\Mazes Assets\Scripts\SaveLocation_OpenFieldReward.cs" />
      <Compile Include="Assets\Mazes Assets\Scripts\SaveLocation_OpenFieldReward_Auditory.cs" />
      <Compile Include="Assets\Mazes Assets\Scripts\SaveLocation_Stimulus.cs" />
      <Compile Include="Assets\Mazes Assets\Scripts\Stimulus.cs" />
      <Compile Include="Assets\Mazes Assets\Scripts\StimulusRestart.cs" />
+     <Compile Include="Assets\Mazes Assets\Scripts\Transparent.cs" />
+     <Compile Include="Assets\Mazes Assets\Scripts\Transparent_FadeIn.cs" />
+     <Compile Include="Assets\Mazes Assets\Scripts\Transparent_FadeOut.cs" />
      <None Include="Assets\Resources\SyphonShaders\Particle AddSmooth.shader" />
      <None Include="Assets\Resources\SyphonShaders\AlphaTest-BumpSpec01.shader" />
      <None Include="Assets\Resources\SyphonShaders\Particle AddBehind.shader" />
@@ -76,6 +82,7 @@
      <None Include="Assets\Resources\SyphonShaders\Alpha-BumpSpec01.shader" />
      <None Include="Assets\Resources\SyphonShaders\Alpha-ParallaxSpec01.shader" />
      <None Include="Assets\Resources\SyphonShaders\Alpha-Diffuse01.shader" />
+     <None Include="Assets\Resources\SyphonShaders\Unlit-Transparent-Custom.shader" />
      <None Include="Assets\Resources\SyphonShaders\AlphaTest-Glossy01.shader" />
      <None Include="Assets\Resources\SyphonShaders\Particle MultiplyDouble.shader" />
      <None Include="Assets\Resources\SyphonShaders\Particle AddMultiply.shader" />

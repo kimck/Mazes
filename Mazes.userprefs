@@ -1,10 +1,11 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Mazes Assets/Scripts/SaveLocation_LTrack_Switching.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Mazes Assets/Scripts/Transparent_FadeOut.cs">
     <Files>
-      <File FileName="Assets/Mazes Assets/Scripts/LTrack_RestartTrigger_Switching.cs" Line="18" Column="22" />
-      <File FileName="Assets/Mazes Assets/Scripts/LTrack_RewardTrigger_Switching.cs" Line="160" Column="23" />
-      <File FileName="Assets/Mazes Assets/Scripts/SaveLocation_LTrack_Switching.cs" Line="55" Column="49" />
+      <File FileName="Assets/Mazes Assets/Scripts/Transparent_FadeIn.cs" Line="21" Column="3" />
+      <File FileName="Assets/Mazes Assets/Scripts/Transparent_FadeOut.cs" Line="22" Column="14" />
+      <File FileName="Assets/Mazes Assets/Scripts/LTrack_RewardTrigger_Morphing.cs" Line="19" Column="57" />
+      <File FileName="Assets/Mazes Assets/Scripts/LTrack_RestartTrigger_Morphing.cs" Line="7" Column="44" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

@@ -7,6 +7,7 @@ using System.ComponentModel;
 public class LTrack_RestartTrigger : MonoBehaviour {
 	
 	public GameObject player;
+	public float nextmaze;
 
 	// Use this for initialization
 	void Start () {
@@ -29,7 +30,8 @@ public class LTrack_RestartTrigger : MonoBehaviour {
 		
 		yield return new WaitForSeconds (delaytime);
 		
-		if (rand.Next(0, 2) == 0) {
+		nextmaze=rand.Next (0,2);
+		if (nextmaze == 0) {
 			Vector3 originalPosition = new Vector3(0.5f,1.1f,0);
 			Vector3 originalRotation = new Vector3(0,90,0);
 			player.transform.position = originalPosition;
