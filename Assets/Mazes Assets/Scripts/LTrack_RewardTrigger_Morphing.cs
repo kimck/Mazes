@@ -163,7 +163,7 @@ public class LTrack_RewardTrigger_Morphing : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		runningtrialtime=runningtrialtime+Time.deltaTime;
-		print (player.transform.position.x);
+		print (all_trial_num);
 		
 		if (outcome == "'correct'") {
 			runningtrialtime=0;
