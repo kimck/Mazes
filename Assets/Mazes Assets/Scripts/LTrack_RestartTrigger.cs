@@ -37,6 +37,7 @@ public class LTrack_RestartTrigger : MonoBehaviour {
 			player.transform.position = originalPosition;
 	        player.transform.eulerAngles = originalRotation;
 			LTrack_RewardTrigger.context = "'restart'";
+			LTrack_RewardTrigger.all_trial_num=LTrack_RewardTrigger.all_trial_num+1;
 		}
 		else {
 			Vector3 originalPosition = new Vector3(0.5f,1.1f,200); 
@@ -44,6 +45,7 @@ public class LTrack_RestartTrigger : MonoBehaviour {
 			player.transform.position = originalPosition;
 	       	player.transform.eulerAngles = originalRotation;
 			LTrack_RewardTrigger.context = "'reward'";
+			LTrack_RewardTrigger.all_trial_num=LTrack_RewardTrigger.all_trial_num+1;
 		}
 		
 		LTrack_RewardTrigger.runningtrialtime=0;

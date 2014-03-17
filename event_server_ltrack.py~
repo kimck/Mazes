@@ -127,7 +127,7 @@ class EventServer( object ):
             print "----------------RESTART------------------"
             self.labjack_logger.execute_task( {'mode':'write','register':6000+0, 'write_value':0} )
             self.labjack_logger.execute_task( {'mode':'write','register':6000+1, 'write_value':1} )
-            self.labjack_logger.execute_task( {'mode':'write','register':6000+2, 'write_value':1} )
+            self.labjack_logger.execute_task( {'mode':'write','register':6000+2, 'write_Value':1} )
         elif outcome == 'incorrect':
             print "---------------INCORRECT-----------------"
             self.labjack_logger.execute_task( {'mode':'write','register':6000+0, 'write_value':0} )

@@ -11,6 +11,7 @@ public class LTrack_RewardTrigger : MonoBehaviour {
 	public static float runningtrialtime = 0;
 	public GameObject player;
 	public float nextmaze;
+	public static int all_trial_num=0;
 	
 	// Use this for initialization
 	void Start () {
@@ -22,6 +23,7 @@ public class LTrack_RewardTrigger : MonoBehaviour {
 			player.transform.position = originalPosition;
 	        player.transform.eulerAngles = originalRotation;
 			context = "'restart'";
+			all_trial_num=all_trial_num+1;
 		}
 		else {
 			Vector3 originalPosition = new Vector3(0.5f,1.1f,200); 
@@ -29,6 +31,7 @@ public class LTrack_RewardTrigger : MonoBehaviour {
 			player.transform.position = originalPosition;
 	       	player.transform.eulerAngles = originalRotation;
 			context = "'reward'";
+			all_trial_num=all_trial_num+1;
 		}
 	}
 	
@@ -55,6 +58,7 @@ public class LTrack_RewardTrigger : MonoBehaviour {
 			player.transform.position = originalPosition;
 	        player.transform.eulerAngles = originalRotation;
 			context = "'restart'";
+			all_trial_num=all_trial_num+1;
 		}
 		else {
 			Vector3 originalPosition = new Vector3(0.5f,1.1f,200); 
@@ -62,6 +66,7 @@ public class LTrack_RewardTrigger : MonoBehaviour {
 			player.transform.position = originalPosition;
 	       	player.transform.eulerAngles = originalRotation;
 			context = "'reward'";
+			all_trial_num=all_trial_num+1;
 		}
 		
 		runningtrialtime=0;	
@@ -70,6 +75,7 @@ public class LTrack_RewardTrigger : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		runningtrialtime=runningtrialtime+Time.deltaTime;
+		print (all_trial_num);
 		
 		if (outcome == "'correct'") {
 			runningtrialtime=0;
