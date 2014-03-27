@@ -157,16 +157,16 @@ public class LTrack_RewardTrigger_Switching : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		runningtrialtime=runningtrialtime+Time.deltaTime;
-		print (player.transform.position.x);
+		print (all_trial_num);
 		
-		if (player.transform.position.x > 66.65 & switchflag == true) {
+		if (player.transform.position.x > 33.33335 & switchflag == true) {
 			switchflag=false;
 			if (player.transform.position.z <100) {
-				Vector3 maze2pos = new Vector3(66.65f,1.1f,200);
+				Vector3 maze2pos = new Vector3(33.33335f,1.1f,200);
 				player.transform.position = maze2pos;
 			}
 			else if (player.transform.position.z > 100) {
-				Vector3 maze1pos = new Vector3(66.65f,1.1f,0);
+				Vector3 maze1pos = new Vector3(33.33335f,1.1f,0);
 				player.transform.position = maze1pos;
 			}
 		}		
