@@ -12,6 +12,8 @@ public class LTrack_RewardTrigger_Switching : MonoBehaviour {
 	public GameObject player;
 	public float nextmaze;
 	public static bool switchflag = false;
+	public AudioClip s_reward; // assign these sounds in consol
+	public AudioClip s_restart;
 	
 	// For imaging with morphing/switching
 	public static int all_trial_num=0;
@@ -60,6 +62,9 @@ public class LTrack_RewardTrigger_Switching : MonoBehaviour {
 	        player.transform.eulerAngles = originalRotation;
 			context = "'restart'";
 			all_trial_num=all_trial_num+1;
+			audio.loop=true;
+			audio.clip=s_restart;
+			audio.Play ();
 		}
 		else if (nextmaze == 1) {
 			Vector3 originalPosition = new Vector3(0.5f,1.1f,200); 
@@ -68,6 +73,9 @@ public class LTrack_RewardTrigger_Switching : MonoBehaviour {
 	       	player.transform.eulerAngles = originalRotation;
 			context = "'reward'";
 			all_trial_num=all_trial_num+1;
+			audio.loop=true;
+			audio.clip=s_reward;
+			audio.Play ();
 		}
 	}
 	
@@ -123,6 +131,9 @@ public class LTrack_RewardTrigger_Switching : MonoBehaviour {
 	        player.transform.eulerAngles = originalRotation;
 			context = "'restart'";
 			all_trial_num=all_trial_num+1;
+			audio.loop=true;
+			audio.clip=s_restart;
+			audio.Play ();
 		}
 		else if (nextmaze == 1) {
 			Vector3 originalPosition = new Vector3(0.5f,1.1f,200); 
@@ -131,6 +142,9 @@ public class LTrack_RewardTrigger_Switching : MonoBehaviour {
 	       	player.transform.eulerAngles = originalRotation;
 			context = "'reward'";
 			all_trial_num=all_trial_num+1;
+			audio.loop=true;
+			audio.clip=s_reward;
+			audio.Play ();
 		}
 		else if (nextmaze == 2) {
 			switchflag = true;
@@ -140,6 +154,9 @@ public class LTrack_RewardTrigger_Switching : MonoBehaviour {
 	        player.transform.eulerAngles = originalRotation;
 			context = "'restart_switch'";
 			all_trial_num=all_trial_num+1;
+			audio.loop=true;
+			audio.clip=s_restart;
+			audio.Play ();
 		}
 		else if (nextmaze == 3) {
 			switchflag = true;
@@ -149,6 +166,9 @@ public class LTrack_RewardTrigger_Switching : MonoBehaviour {
 	       	player.transform.eulerAngles = originalRotation;
 			context = "'reward_switch'";
 			all_trial_num=all_trial_num+1;
+			audio.loop=true;
+			audio.clip=s_reward;
+			audio.Play ();
 		}
 		
 		runningtrialtime=0;	
@@ -159,19 +179,32 @@ public class LTrack_RewardTrigger_Switching : MonoBehaviour {
 		runningtrialtime=runningtrialtime+Time.deltaTime;
 		print (all_trial_num);
 		
-		if (player.transform.position.x > 33.33335 & switchflag == true) {
+		if (player.transform.position.x > 66.66667 & switchflag == true) {
 			switchflag=false;
 			if (player.transform.position.z <100) {
-				Vector3 maze2pos = new Vector3(33.33335f,1.1f,200);
+				Vector3 maze2pos = new Vector3(66.66667f,1.1f,200);
 				player.transform.position = maze2pos;
+				audio.Stop ();
+				audio.loop=true;
+				audio.clip=s_reward;
+				audio.Play ();
 			}
 			else if (player.transform.position.z > 100) {
-				Vector3 maze1pos = new Vector3(33.33335f,1.1f,0);
+				Vector3 maze1pos = new Vector3(66.66667f,1.1f,0);
 				player.transform.position = maze1pos;
+				audio.Stop ();
+				audio.loop=true;
+				audio.clip=s_restart;
+				audio.Play ();
 			}
 		}		
 		
+		if (outcome == "'restart'") {
+			audio.Stop ();
+		}
+		
 		if (outcome == "'correct'") {
+			audio.Stop ();
 			runningtrialtime=0;
 			StartCoroutine (DelayRestartMaze(5.0f));
 		}

@@ -12,6 +12,10 @@ public class LTrack_RewardTrigger_Morphing : MonoBehaviour {
 	public GameObject player;
 	public float nextmaze;
 	public static bool morphflag = false;
+	public static bool lastmazeflag = true;
+	public AudioClip s_reward; // assign these sounds in consol
+	public AudioClip s_restart;
+	public bool firstplayflag = true;
 	
 	// For imaging with morphing/switching
 	public static int all_trial_num=0;
@@ -60,6 +64,9 @@ public class LTrack_RewardTrigger_Morphing : MonoBehaviour {
 	        player.transform.eulerAngles = originalRotation;
 			context = "'restart'";
 			all_trial_num=all_trial_num+1;
+			audio.loop=true;
+			audio.clip=s_restart;
+			audio.Play ();
 		}
 		else if (nextmaze == 1) {
 			Vector3 originalPosition = new Vector3(0.5f,1.1f,200); 
@@ -68,6 +75,9 @@ public class LTrack_RewardTrigger_Morphing : MonoBehaviour {
 	       	player.transform.eulerAngles = originalRotation;
 			context = "'reward'";
 			all_trial_num=all_trial_num+1;
+			audio.loop=true;
+			audio.clip=s_reward;
+			audio.Play ();
 		}
 	}
 	
@@ -129,6 +139,10 @@ public class LTrack_RewardTrigger_Morphing : MonoBehaviour {
 	        player.transform.eulerAngles = originalRotation;
 			context = "'restart'";
 			all_trial_num=all_trial_num+1;
+			audio.loop=true;
+			audio.clip=s_restart;
+			audio.Play ();
+			audio.volume = 1;
 		}
 		else if (nextmaze == 1) {
 			Vector3 originalPosition = new Vector3(0.5f,1.1f,200); 
@@ -137,6 +151,10 @@ public class LTrack_RewardTrigger_Morphing : MonoBehaviour {
 	       	player.transform.eulerAngles = originalRotation;
 			context = "'reward'";
 			all_trial_num=all_trial_num+1;
+			audio.loop=true;
+			audio.clip=s_reward;
+			audio.Play ();
+			audio.volume = 1;
 		}
 		else if (nextmaze == 2) {
 			morphflag = true;
@@ -146,6 +164,10 @@ public class LTrack_RewardTrigger_Morphing : MonoBehaviour {
 	        player.transform.eulerAngles = originalRotation;
 			context = "'restart_morph'";
 			all_trial_num=all_trial_num+1;
+			audio.loop=true;
+			audio.clip=s_restart;
+			audio.Play ();
+			audio.volume = 1;
 		}
 		else if (nextmaze == 3) {
 			morphflag = true;
@@ -155,6 +177,10 @@ public class LTrack_RewardTrigger_Morphing : MonoBehaviour {
 	       	player.transform.eulerAngles = originalRotation;
 			context = "'reward_morph'";
 			all_trial_num=all_trial_num+1;
+			audio.loop=true;
+			audio.clip=s_reward;
+			audio.Play ();
+			audio.volume = 1;
 		}
 		
 		runningtrialtime=0;	
@@ -165,9 +191,46 @@ public class LTrack_RewardTrigger_Morphing : MonoBehaviour {
 		runningtrialtime=runningtrialtime+Time.deltaTime;
 		print (all_trial_num);
 		
+		if (morphflag == true){
+			if (lastmazeflag == true){
+				// fade out starting volume
+				audio.volume = (133.33333F-player.transform.position.x)/133.33333F;
+			}
+			else if (lastmazeflag == false){
+				// fade in
+				if (player.transform.position.z <100 && firstplayflag == true) {
+					audio.loop=true;
+					audio.clip=s_reward;
+					audio.Play ();
+					audio.volume=(player.transform.position.x)/133.33333F;
+					firstplayflag=false;
+				}
+				else if (player.transform.position.z <100 && firstplayflag == false) {
+					audio.volume=(player.transform.position.x)/133.33333F;
+				}
+				//fade in
+				else if (player.transform.position.z > 100 && firstplayflag == true) {
+					audio.loop=true;
+					audio.clip=s_restart;
+					audio.Play ();
+					audio.volume=(player.transform.position.x)/133.33333F;
+					firstplayflag = false;
+				}
+				else if (player.transform.position.z > 100 && firstplayflag == false) {
+					audio.volume=(player.transform.position.x)/133.33333F;
+				}
+			}
+		}
+		
+		if (outcome == "'restart'") {
+			audio.Stop ();
+		}
+		
 		if (outcome == "'correct'") {
-			runningtrialtime=0;
 			StartCoroutine (DelayRestartMaze(5.0f));
+			audio.Stop ();
+			lastmazeflag=true;
+			firstplayflag = true;
 		}
 	}
 }

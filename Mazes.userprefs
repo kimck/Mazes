@@ -1,11 +1,12 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Mazes Assets/Scripts/LTrack_RewardTrigger_Switching.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Mazes Assets/Scripts/LTrack_RewardTrigger_Morphing.cs">
     <Files>
-      <File FileName="Assets/Mazes Assets/Scripts/LTrack_RewardTrigger.cs" Line="1" Column="1" />
-      <File FileName="Assets/Mazes Assets/Scripts/LTrack_RestartTrigger.cs" Line="1" Column="1" />
-      <File FileName="Assets/Mazes Assets/Scripts/LTrack_RestartTrigger_Switching.cs" Line="1" Column="1" />
-      <File FileName="Assets/Mazes Assets/Scripts/LTrack_RewardTrigger_Switching.cs" Line="160" Column="23" />
+      <File FileName="Assets/Mazes Assets/Scripts/LTrack_RewardTrigger_Morphing.cs" Line="197" Column="23" />
+      <File FileName="Assets/Mazes Assets/Scripts/LTrack_RestartTrigger_Morphing.cs" Line="172" Column="33" />
+      <File FileName="Assets/Mazes Assets/Scripts/LTrack_RestartTrigger.cs" Line="65" Column="3" />
+      <File FileName="Assets/Mazes Assets/Scripts/LTrack_RewardTrigger.cs" Line="97" Column="1" />
+      <File FileName="Assets/Mazes Assets/Scripts/LTrack_RewardTrigger_Switching.cs" Line="65" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

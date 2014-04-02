@@ -8,13 +8,15 @@ public class LTrack_RestartTrigger : MonoBehaviour {
 	
 	public GameObject player;
 	public float nextmaze;
+	public AudioClip s_reward; // assign these sounds in consol
+	public AudioClip s_restart;
 
 	// Use this for initialization
 	void Start () {
 		player = GameObject.Find ("LiveMouseFPSController");
 	}
 	
- 	void OnTriggerEnter (Collider col) {	
+ 	void OnTriggerEnter (Collider col) {
     	LTrack_RewardTrigger.outcome = "'restart'";
 	}
 	
@@ -25,6 +27,7 @@ public class LTrack_RestartTrigger : MonoBehaviour {
 //	}
 	
 	IEnumerator DelayRestartMaze (float delaytime) {
+		audio.Stop ();
 		Vector3 blackboxPosition = new Vector3(300,1.1f,100);
 		player.transform.position = blackboxPosition;
 		
@@ -38,6 +41,9 @@ public class LTrack_RestartTrigger : MonoBehaviour {
 	        player.transform.eulerAngles = originalRotation;
 			LTrack_RewardTrigger.context = "'restart'";
 			LTrack_RewardTrigger.all_trial_num=LTrack_RewardTrigger.all_trial_num+1;
+			audio.loop=true;
+			audio.clip=s_restart;
+			audio.Play ();
 		}
 		else {
 			Vector3 originalPosition = new Vector3(0.5f,1.1f,200); 
@@ -46,16 +52,21 @@ public class LTrack_RestartTrigger : MonoBehaviour {
 	       	player.transform.eulerAngles = originalRotation;
 			LTrack_RewardTrigger.context = "'reward'";
 			LTrack_RewardTrigger.all_trial_num=LTrack_RewardTrigger.all_trial_num+1;
+			audio.loop=true;
+			audio.clip=s_reward;
+			audio.Play ();
 		}
 		
 		LTrack_RewardTrigger.runningtrialtime=0;
 	}
 	
 	// Update is called once per frame
-	void Update () {		
-		if (LTrack_RewardTrigger.outcome == "'restart'" || LTrack_RewardTrigger.outcome == "'incorrect'") {
-			LTrack_RewardTrigger.runningtrialtime=0;
+	void Update () {
+		if (LTrack_RewardTrigger.outcome == "'restart'") {
 			StartCoroutine (DelayRestartMaze(5.0f));
+		}
+		if (LTrack_RewardTrigger.outcome == "'correct'") {
+			audio.Stop ();
 		}
 	}
 }
