@@ -1,4 +1,3 @@
-
 # general libraries
 import os, sys, time, copy
 import numpy as np
@@ -151,7 +150,6 @@ class LabjackLogger( ThreadedLogger ):
         
     def execute_task( self, task ):
         if task['mode'] == 'read':
-            self.labjack.readRegister(['register'])
             self.log(task, 'labjack_task' )
         elif task['mode'] == 'write':
             self.labjack.writeRegister(task['register'], task['write_value'])
@@ -181,7 +179,6 @@ class LabjackLogger( ThreadedLogger ):
                 print "----------------in queue has tasks! ------------------"
                 task = self.in_queue.get()
                 if task['mode'] == 'read':
-                    self.labjack.readRegister(task['register'])
                     self.log(task, 'labjack_task' )
                 elif task['mode'] == 'write':
                     #from plugins.parameters import argon

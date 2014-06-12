@@ -114,27 +114,44 @@ class EventServer( object ):
         #print("context: " + context)
 
         if context == 'None':
+            self.labjack_logger.execute_task( {'mode':'write','register':5000+0, 'write_value':0} )
+            self.labjack_logger.execute_task( {'mode':'write','register':5000+2, 'write_value':0} )
             self.labjack_logger.execute_task( {'mode':'write','register':6000+2, 'write_value':0} )
-        else:
+        elif context == 'reward':
+            self.labjack_logger.execute_task( {'mode':'write','register':5000+0, 'write_value':5} )
             self.labjack_logger.execute_task( {'mode':'write','register':6000+2, 'write_value':1} )
+        elif context == 'reward_morph':
+            self.labjack_logger.execute_task( {'mode':'write','register':5000+0, 'write_value':5} )
+            self.labjack_logger.execute_task( {'mode':'write','register':6000+2, 'write_value':1} )
+        elif context == 'ambiguous_reward':
+            self.labjack_logger.execute_task( {'mode':'write','register':5000+0, 'write_value':5} )
+            self.labjack_logger.execute_task( {'mode':'write','register':6000+2, 'write_value':1} )
+        elif context == 'restart':
+            self.labjack_logger.execute_task( {'mode':'write','register':5000+2, 'write_value':5} )
+            self.labjack_logger.execute_task( {'mode':'write','register':6000+2, 'write_value':1} )
+        elif context == 'restart_morph':
+            self.labjack_logger.execute_task( {'mode':'write','register':5000+2, 'write_value':5} )
+            self.labjack_logger.execute_task( {'mode':'write','register':6000+2, 'write_value':1} )
+        elif context == 'ambiguous_restart':
+            self.labjack_logger.execute_task( {'mode':'write','register':5000+2, 'write_value':5} )
+            self.labjack_logger.execute_task( {'mode':'write','register':6000+2, 'write_value':1} )
+
 
         if outcome == 'correct':
             print "----------------CORRECT------------------"
             self.labjack_logger.execute_task( {'mode':'write','register':6000+0, 'write_value':1} )
             self.labjack_logger.execute_task( {'mode':'write','register':6000+1, 'write_value':0} )
-            self.labjack_logger.execute_task( {'mode':'write','register':6000+2, 'write_value':1} )
+            self.labjack_logger.execute_task( {'mode':'write','register':5000+0, 'write_value':5} )
         elif outcome == 'restart':
             print "----------------RESTART------------------"
             self.labjack_logger.execute_task( {'mode':'write','register':6000+0, 'write_value':0} )
             self.labjack_logger.execute_task( {'mode':'write','register':6000+1, 'write_value':1} )
-            self.labjack_logger.execute_task( {'mode':'write','register':6000+2, 'write_value':1} )
-        elif outcome == 'incorrect':
-            print "---------------INCORRECT-----------------"
-            self.labjack_logger.execute_task( {'mode':'write','register':6000+0, 'write_value':0} )
-            self.labjack_logger.execute_task( {'mode':'write','register':6000+1, 'write_value':0} )
+            self.labjack_logger.execute_task( {'mode':'write','register':5000+2, 'write_value':5} )
         elif outcome == 'None':
             self.labjack_logger.execute_task( {'mode':'write','register':6000+0, 'write_value':0} )
             self.labjack_logger.execute_task( {'mode':'write','register':6000+1, 'write_value':0} )
+            self.labjack_logger.execute_task( {'mode':'write','register':5000+0, 'write_value':0} )
+            self.labjack_logger.execute_task( {'mode':'write','register':5000+2, 'write_value':0} )
         else:
             raise NotImplementedError("Events > 3 have yet to be implemented.")
 

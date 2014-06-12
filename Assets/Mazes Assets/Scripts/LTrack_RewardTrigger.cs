@@ -19,7 +19,7 @@ public class LTrack_RewardTrigger : MonoBehaviour {
 	void Start () {
 		player = GameObject.Find ("LiveMouseFPSController");
 		nextmaze=rand.Next (0,2);
-		if (nextmaze == 0) {
+		if (nextmaze ==1) {
 			Vector3 originalPosition = new Vector3(0.5f,1.1f,0);
 			Vector3 originalRotation = new Vector3(0,90,0);
 			player.transform.position = originalPosition;
@@ -61,7 +61,7 @@ public class LTrack_RewardTrigger : MonoBehaviour {
 		yield return new WaitForSeconds (delaytime);
 		
 		nextmaze=rand.Next (0,2);
-		if (nextmaze == 0) {
+		if (nextmaze ==1) {
 			Vector3 originalPosition = new Vector3(0.5f,1.1f,0);
 			Vector3 originalRotation = new Vector3(0,90,0);
 			player.transform.position = originalPosition;

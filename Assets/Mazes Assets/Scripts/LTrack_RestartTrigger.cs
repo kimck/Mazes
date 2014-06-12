@@ -34,7 +34,7 @@ public class LTrack_RestartTrigger : MonoBehaviour {
 		yield return new WaitForSeconds (delaytime);
 		
 		nextmaze=rand.Next (0,2);
-		if (nextmaze == 0) {
+		if (nextmaze ==0) {
 			Vector3 originalPosition = new Vector3(0.5f,1.1f,0);
 			Vector3 originalRotation = new Vector3(0,90,0);
 			player.transform.position = originalPosition;
@@ -46,7 +46,7 @@ public class LTrack_RestartTrigger : MonoBehaviour {
 			audio.Play ();
 		}
 		else {
-			Vector3 originalPosition = new Vector3(0.5f,1.1f,200); 
+			Vector3 originalPosition = new Vector3(0.5f,1.1f,200);
 			Vector3 originalRotation = new Vector3(0,90,0);
 			player.transform.position = originalPosition;
 	       	player.transform.eulerAngles = originalRotation;
