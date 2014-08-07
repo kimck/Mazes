@@ -138,27 +138,27 @@ public class LTrack_RestartTrigger_Morphing : MonoBehaviour {
 					audio.loop=true;
 					audio.clip=s_reward;
 					audio.Play ();
-					audio.volume=(player.transform.position.x)/133.33333F;
+					audio.volume=(player.transform.position.x)/66.6667F;
 					firstplayflag = false;
 				}
 				else if (player.transform.position.z <100 && firstplayflag == false) {
-					audio.volume=(player.transform.position.x)/133.33333F;
+					audio.volume=(player.transform.position.x)/66.6667F;
 				}
 				//fade in
 				else if (player.transform.position.z > 100 && firstplayflag == true) {
 					audio.loop=true;
 					audio.clip=s_restart;
 					audio.Play ();
-					audio.volume=(player.transform.position.x)/133.33333F;
+					audio.volume=(player.transform.position.x)/66.6667F;
 					firstplayflag = false;
 				}
 				else if (player.transform.position.z > 100 && firstplayflag == false) {
-					audio.volume=(player.transform.position.x)/133.33333F;
+					audio.volume=(player.transform.position.x)/66.6667F;
 				}
 			}
 			else if (LTrack_RewardTrigger_Morphing.lastmazeflag == false){
 				//fade out
-				audio.volume = (133.33333F-player.transform.position.x)/133.33333F;
+				audio.volume = (66.6667F-player.transform.position.x)/66.6667F;
 			}
 		}
 		

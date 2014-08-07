@@ -194,7 +194,7 @@ public class LTrack_RewardTrigger_Morphing : MonoBehaviour {
 		if (morphflag == true){
 			if (lastmazeflag == true){
 				// fade out starting volume
-				audio.volume = (133.33333F-player.transform.position.x)/133.33333F;
+				audio.volume = (66.6667F-player.transform.position.x)/66.6667F;
 				//audio.volume = (66.66667F-player.transform.position.x)/66.66667F;
 			}
 			else if (lastmazeflag == false){
@@ -203,22 +203,22 @@ public class LTrack_RewardTrigger_Morphing : MonoBehaviour {
 					audio.loop=true;
 					audio.clip=s_reward;
 					audio.Play ();
-					audio.volume=(player.transform.position.x)/133.33333F;
+					audio.volume=(player.transform.position.x)/66.6667F;
 					firstplayflag=false;
 				}
 				else if (player.transform.position.z <100 && firstplayflag == false) {
-					audio.volume=(player.transform.position.x)/133.33333F;
+					audio.volume=(player.transform.position.x)/66.6667F;
 				}
 				//fade in
 				else if (player.transform.position.z > 100 && firstplayflag == true) {
 					audio.loop=true;
 					audio.clip=s_restart;
 					audio.Play ();
-					audio.volume=(player.transform.position.x)/133.33333F;
+					audio.volume=(player.transform.position.x)/66.6667F;
 					firstplayflag = false;
 				}
 				else if (player.transform.position.z > 100 && firstplayflag == false) {
-					audio.volume=(player.transform.position.x)/133.33333F;
+					audio.volume=(player.transform.position.x)/66.6667F;
 				}
 			}
 		}

@@ -22,6 +22,9 @@ void setup(){
      digitalWrite(8,LOW);
      //Reset flag
      pinMode(3,INPUT);
+     //Solenoid output
+     pinMode(13,OUTPUT);
+     digitalWrite(13,LOW);
 }
 
 // Main loop
@@ -61,8 +64,10 @@ void loop(){
   if(flag1==1 & lickport1.read()==HIGH) {
     flag1=0;
     digitalWrite(10, HIGH);
-    delay(25);
+    digitalWrite(13, HIGH);
+    delay(100);
     digitalWrite(10, LOW);
+    digitalWrite(13, LOW);
   } //else if(flag1==1 & lickport2.read()==HIGH){
     //flag1=0; 
   //}
@@ -71,8 +76,10 @@ void loop(){
   if(flag2==1 & lickport2.read()==HIGH) {
     flag2=0;
     digitalWrite(12, HIGH);
-    delay(25);
+    digitalWrite(13, HIGH);
+    delay(100);
     digitalWrite(12, LOW);
+    digitalWrite(13, LOW);
   } //else if (flag2==1 & lickport1.read()==HIGH) {
     //flag2=0;
   //}
