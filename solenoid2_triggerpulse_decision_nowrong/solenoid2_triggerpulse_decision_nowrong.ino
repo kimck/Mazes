@@ -22,13 +22,14 @@ void setup(){
      digitalWrite(8,LOW);
      //Reset flag
      pinMode(3,INPUT);
-     //Solenoid output
-     pinMode(13,OUTPUT);
+     //Solenoid time
+     pinMode(13, OUTPUT);
      digitalWrite(13,LOW);
 }
 
 // Main loop
 void loop(){
+  Serial.print(flag1);
   
   //Reset flags
   if (digitalRead(3) ==1) {
@@ -48,7 +49,7 @@ void loop(){
   
   //Log lickport 1    
   if (lickport1.read()==HIGH) {
-    digitalWrite(7,HIGH);  
+    digitalWrite(7,HIGH);
   } else{
     digitalWrite(7,LOW);
   }
@@ -65,7 +66,7 @@ void loop(){
     flag1=0;
     digitalWrite(10, HIGH);
     digitalWrite(13, HIGH);
-    delay(100);
+    delay(250);
     digitalWrite(10, LOW);
     digitalWrite(13, LOW);
   } //else if(flag1==1 & lickport2.read()==HIGH){
@@ -77,7 +78,7 @@ void loop(){
     flag2=0;
     digitalWrite(12, HIGH);
     digitalWrite(13, HIGH);
-    delay(100);
+    delay(250);
     digitalWrite(12, LOW);
     digitalWrite(13, LOW);
   } //else if (flag2==1 & lickport1.read()==HIGH) {

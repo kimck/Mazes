@@ -26,13 +26,13 @@ void loop(){
   //Solenoid 1
     if(digitalRead(2) == 1) {
        digitalWrite(10, HIGH);
-       delay(100);
+       delay(250);
        digitalWrite(10, LOW);
     }
   //Solenoid 2
     if(digitalRead(5) == 1) {
        digitalWrite(12, HIGH);
-       delay(100);
+       delay(250);
        digitalWrite(12, LOW);
     }
     
