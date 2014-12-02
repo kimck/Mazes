@@ -7,9 +7,13 @@ using System.ComponentModel;
 public class LTrack_RestartTrigger : MonoBehaviour {
 	
 	public GameObject player;
-	public float nextmaze;
+	public int nextmaze;
 	public AudioClip s_reward; // assign these sounds in consol
 	public AudioClip s_restart;
+	public float counter = 0;
+	//System.Random rand = new System.Random();
+	//public int Range(int min, int max);
+
 
 	// Use this for initialization
 	void Start () {
@@ -19,9 +23,8 @@ public class LTrack_RestartTrigger : MonoBehaviour {
  	void OnTriggerEnter (Collider col) {
     	LTrack_RewardTrigger.outcome = "'restart'";
 	}
-	
-	System.Random rand = new System.Random();
-	
+
+		
 //	void onTriggerExit (Collider col) {
 //    	isTriggered = false;
 //	}
@@ -33,8 +36,15 @@ public class LTrack_RestartTrigger : MonoBehaviour {
 		
 		yield return new WaitForSeconds (delaytime);
 		
-		nextmaze=rand.Next (0,2);
-		if (nextmaze ==0) {
+		//nextmaze=rand.Next (0,2);
+		
+		nextmaze=UnityEngine.Random.Range(0,2);
+//		nextmaze=0;		
+//		if (counter==3) {
+//			counter=0;
+//			nextmaze=1;
+//		}
+		if (nextmaze==0) {
 			Vector3 originalPosition = new Vector3(0.5f,1.1f,0);
 			Vector3 originalRotation = new Vector3(0,90,0);
 			player.transform.position = originalPosition;
@@ -58,6 +68,7 @@ public class LTrack_RestartTrigger : MonoBehaviour {
 		}
 		
 		LTrack_RewardTrigger.runningtrialtime=0;
+		counter=counter+1;
 	}
 	
 	// Update is called once per frame

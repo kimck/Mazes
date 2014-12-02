@@ -122,7 +122,7 @@ class EventServer( object ):
         elif context == 'reward_morph':
             self.labjack_logger.execute_task( {'mode':'write','register':5000+0, 'write_value':5} )
             self.labjack_logger.execute_task( {'mode':'write','register':6000+2, 'write_value':1} )
-        elif context == 'ambiguous_reward':
+        elif context == 'reward_ambiguous':
             self.labjack_logger.execute_task( {'mode':'write','register':5000+0, 'write_value':5} )
             self.labjack_logger.execute_task( {'mode':'write','register':6000+2, 'write_value':1} )
         elif context == 'restart':
@@ -131,7 +131,7 @@ class EventServer( object ):
         elif context == 'restart_morph':
             self.labjack_logger.execute_task( {'mode':'write','register':5000+0, 'write_value':5} )
             self.labjack_logger.execute_task( {'mode':'write','register':6000+2, 'write_value':1} )
-        elif context == 'ambiguous_restart':
+        elif context == 'restart_ambiguous':
             self.labjack_logger.execute_task( {'mode':'write','register':5000+0, 'write_value':5} )
             self.labjack_logger.execute_task( {'mode':'write','register':6000+2, 'write_value':1} )
 

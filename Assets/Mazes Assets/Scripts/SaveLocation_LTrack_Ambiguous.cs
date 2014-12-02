@@ -53,6 +53,7 @@ public class SaveLocation_LTrack_Ambiguous : MonoBehaviour {
 		    ", 'y_mouse':" + Input.GetAxis("Mouse Y") +
 			", 'context':" + LTrack_RewardTrigger_Ambiguous.context +
 			", 'outcome':" + LTrack_RewardTrigger_Ambiguous.outcome +
+			", 'ratio':" + Transparent_Reward.otherAlpha +
 			"}";
 		
 		Byte[] data = System.Text.Encoding.ASCII.GetBytes(message);
@@ -79,6 +80,7 @@ public class SaveLocation_LTrack_Ambiguous : MonoBehaviour {
 		    ", 'y_mouse':" + Input.GetAxis("Mouse Y") +
 			", 'context':" + LTrack_RewardTrigger_Ambiguous.context +
 			", 'outcome':" + LTrack_RewardTrigger_Ambiguous.outcome +
+			", 'ratio': " + Transparent_Reward.otherAlpha +
 		    "}";
 
 		// TODO: add a an object that persists through the game that 

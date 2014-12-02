@@ -10,16 +10,21 @@ public class LTrack_RewardTrigger : MonoBehaviour {
 	public static string outcome = "'None'";
 	public static float runningtrialtime = 0;
 	public GameObject player;
-	public float nextmaze;
+	public int nextmaze;
 	public static int all_trial_num=0;
 	public AudioClip s_reward; // assign these sounds in consol
 	public AudioClip s_restart;
+	public float counter = 0;
+	//System.Random rand = new System.Random();
+	//public int Range(int min, int max);
+
 	
 	// Use this for initialization
 	void Start () {
 		player = GameObject.Find ("LiveMouseFPSController");
-		nextmaze=rand.Next (0,2);
-		if (nextmaze ==1) {
+		//nextmaze=rand.Next (0,2);
+		nextmaze=UnityEngine.Random.Range(0,2);
+		if (nextmaze==1) {
 			Vector3 originalPosition = new Vector3(0.5f,1.1f,0);
 			Vector3 originalRotation = new Vector3(0,90,0);
 			player.transform.position = originalPosition;
@@ -42,12 +47,11 @@ public class LTrack_RewardTrigger : MonoBehaviour {
 			audio.Play ();
 		}
 	}
-	
+
  	void OnTriggerEnter (Collider col) {
     	outcome = "'correct'";
 	}
 	
-	System.Random rand = new System.Random();
 	
 //	void onTriggerExit (Collider col) {
 //   	isTriggered = false;
@@ -60,8 +64,15 @@ public class LTrack_RewardTrigger : MonoBehaviour {
 		
 		yield return new WaitForSeconds (delaytime);
 		
-		nextmaze=rand.Next (0,2);
-		if (nextmaze ==1) {
+		//nextmaze=rand.Next (0,2);
+		nextmaze=UnityEngine.Random.Range(0,2);
+//		nextmaze=1;
+//		if (counter==3) {
+//			counter=0;
+//			nextmaze=0;
+//		}
+		if (nextmaze==0) {
+			
 			Vector3 originalPosition = new Vector3(0.5f,1.1f,0);
 			Vector3 originalRotation = new Vector3(0,90,0);
 			player.transform.position = originalPosition;
@@ -84,7 +95,8 @@ public class LTrack_RewardTrigger : MonoBehaviour {
 			audio.Play ();
 		}
 		
-		runningtrialtime=0;	
+		runningtrialtime=0;
+		counter=counter+1;
 	}
 	
 	// Update is called once per frame

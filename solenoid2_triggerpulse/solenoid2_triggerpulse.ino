@@ -19,6 +19,9 @@ void setup(){
      digitalWrite(12,LOW);
      pinMode(8,OUTPUT);
      digitalWrite(8,LOW);
+     //Solenoid time
+     pinMode(13,OUTPUT);
+     digitalWrite(13,LOW);
 }
 
 // Main loop
@@ -26,14 +29,18 @@ void loop(){
   //Solenoid 1
     if(digitalRead(2) == 1) {
        digitalWrite(10, HIGH);
+       digitalWrite(13, HIGH);
        delay(250);
        digitalWrite(10, LOW);
+       digitalWrite(13, LOW);
     }
   //Solenoid 2
     if(digitalRead(5) == 1) {
        digitalWrite(12, HIGH);
+       digitalWrite(13, HIGH);
        delay(250);
        digitalWrite(12, LOW);
+       digitalWrite(13, LOW);
     }
     
     //Log lickport 1    

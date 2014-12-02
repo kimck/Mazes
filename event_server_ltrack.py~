@@ -115,7 +115,6 @@ class EventServer( object ):
 
         if context == 'None':
             self.labjack_logger.execute_task( {'mode':'write','register':5000+0, 'write_value':0} )
-            self.labjack_logger.execute_task( {'mode':'write','register':5000+2, 'write_value':0} )
             self.labjack_logger.execute_task( {'mode':'write','register':6000+2, 'write_value':0} )
         elif context == 'reward':
             self.labjack_logger.execute_task( {'mode':'write','register':5000+0, 'write_value':5} )

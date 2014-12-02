@@ -10,40 +10,27 @@ public class LTrack_RewardTrigger_Ambiguous : MonoBehaviour {
 	public static string outcome = "'None'";
 	public static float runningtrialtime = 0;
 	public GameObject player;
-	public static float nextmaze;
-	public static bool morphflag = false;
+	public static int nextmaze;
 	public static bool lastmazeflag = true;
 	public AudioClip s_reward; // assign these sounds in consol
 	public AudioClip s_restart;
 	public bool firstplayflag = true;
 	public int nextpos;
 	public static bool ambiguousflag = false;
+	//System.Random rand = new System.Random();
+	//static int Range(int min, int max);
+
 	
 	// For imaging with morphing/switching
 	public static int all_trial_num=0;
-	public int currentrun = 1;
-	//public int[] run1 = {0,0,3,1,4,1,2,0,3,0,1,2,4,1,0,3,1,0,4,1,2,0,3,1,4,1,0,1,2,0,3,4,0,1,2};
-	//public int[] run2 = {1,2,0,4,3,0,1,2,1,0,1,4,3,0,2,0,1,3,4,1,2,0,1,3,1,0,2,4,1,0,1,0,3,4,0};
-	//public int[] run3 = {0,4,1,2,1,0,3,4,0,1,2,0,1,0,3,1,4,2,1,0,3,0,4,1,2,0,1,3,0,2,4,0,3,1,1};
-	
-	public int[] run1 = {0,0,1,4,1,0,0,1,4,1,0,1,0,4,1,0,1,4,1,0,1,0,4,0,1};
-	public int[] run2 = {1,0,4,0,1,1,0,1,4,0,0,1,4,1,0,1,1,0,4,1,0,1,0,4,0};
-	public int[] run3 = {0,4,1,1,0,4,0,1,0,1,0,1,4,1,0,0,4,1,0,1,0,4,0,1,1};
 	
 	// Use this for initialization
 	void Start () {
 		player = GameObject.Find ("LiveMouseFPSController");
 		
 		// Use this for pseudorandom assignment of mazes during imaging/switching
-		if (currentrun == 1){
-			nextmaze=run1[all_trial_num];
-		}
-		else if (currentrun == 2){
-			nextmaze=run2[all_trial_num];
-		}
-		else if (currentrun == 3){
-			nextmaze=run3[all_trial_num];
-		}
+		//nextmaze=rand.Next (0,2);
+		nextmaze=UnityEngine.Random.Range(0,2);
 		
 		// Place player in proper maze
 		if (nextmaze == 0) {
@@ -72,10 +59,9 @@ public class LTrack_RewardTrigger_Ambiguous : MonoBehaviour {
 	
  	void OnTriggerEnter (Collider col) {	
 		outcome = "'correct'";
+		Transparent_Reward.pick_flag=false;
 	}
-	
-	System.Random rand = new System.Random();
-	
+		
 //	void onTriggerExit (Collider col) {
 //   	isTriggered = false;
 //	}
@@ -87,48 +73,39 @@ public class LTrack_RewardTrigger_Ambiguous : MonoBehaviour {
 		yield return new WaitForSeconds (delaytime);
 		
 		// Use this for pseudorandom assignment of mazes during imaging/switching
-		if (currentrun == 1){
-			nextmaze=run1[all_trial_num];
-		}
-		else if (currentrun == 2){
-			nextmaze=run2[all_trial_num];
-		}
-		else if (currentrun == 3){
-			nextmaze=run3[all_trial_num];
-		}
+		//nextmaze=rand.Next (2,4);
+		nextmaze=UnityEngine.Random.Range(2,4);
 		
 		// Place player in proper maze
-		if (nextmaze == 0) {
-			morphflag=false;
-			ambiguousflag = false;
-			Vector3 originalPosition = new Vector3(0.5f,1.1f,0);
-			Vector3 originalRotation = new Vector3(0,90,0);
-			player.transform.position = originalPosition;
-	        player.transform.eulerAngles = originalRotation;
-			context = "'restart'";
-			all_trial_num=all_trial_num+1;
-			audio.loop=true;
-			audio.clip=s_restart;
-			audio.Play ();
-			audio.volume = 1;
-		}
-		else if (nextmaze == 1) {
-			morphflag=false;
-			ambiguousflag = false;
-			Vector3 originalPosition = new Vector3(0.5f,1.1f,200); 
-			Vector3 originalRotation = new Vector3(0,90,0);
-			player.transform.position = originalPosition;
-	       	player.transform.eulerAngles = originalRotation;
-			context = "'reward'";
-			all_trial_num=all_trial_num+1;
-			audio.loop=true;
-			audio.clip=s_reward;
-			audio.Play ();
-			audio.volume = 1;
-		}
-		else if (nextmaze == 2) {
-			morphflag = true;
-			ambiguousflag = false;
+//		if (nextmaze == 0) {
+//			ambiguousflag = false;
+//			Vector3 originalPosition = new Vector3(0.5f,1.1f,0);
+//			Vector3 originalRotation = new Vector3(0,90,0);
+//			player.transform.position = originalPosition;
+//	        player.transform.eulerAngles = originalRotation;
+//			context = "'restart'";
+//			all_trial_num=all_trial_num+1;
+//			audio.loop=true;
+//			audio.clip=s_restart;
+//			audio.Play ();
+//			audio.volume = 1;
+//		}
+//		else if (nextmaze == 1) {
+//			ambiguousflag = false;
+//			Vector3 originalPosition = new Vector3(0.5f,1.1f,200); 
+//			Vector3 originalRotation = new Vector3(0,90,0);
+//			player.transform.position = originalPosition;
+//	       	player.transform.eulerAngles = originalRotation;
+//			context = "'reward'";
+//			all_trial_num=all_trial_num+1;
+//			audio.loop=true;
+//			audio.clip=s_reward;
+//			audio.Play ();
+//			audio.volume = 1;
+//		}
+		
+		if (nextmaze == 2) {
+			ambiguousflag = true;
 			Vector3 originalPosition = new Vector3(0.5f,1.1f,0);
 			Vector3 originalRotation = new Vector3(0,90,0);
 			player.transform.position = originalPosition;
@@ -141,8 +118,7 @@ public class LTrack_RewardTrigger_Ambiguous : MonoBehaviour {
 			audio.volume = 1;
 		}
 		else if (nextmaze == 3) {
-			morphflag = true;
-			ambiguousflag = false;
+			ambiguousflag = true;
 			Vector3 originalPosition = new Vector3(0.5f,1.1f,200); 
 			Vector3 originalRotation = new Vector3(0,90,0);
 			player.transform.position = originalPosition;
@@ -155,108 +131,53 @@ public class LTrack_RewardTrigger_Ambiguous : MonoBehaviour {
 			audio.volume = 1;
 		}
 		
-		else if (nextmaze == 4) {
-			morphflag = true;
-			ambiguousflag = true;
-			nextpos=rand.Next (0,2);
-			if (nextpos ==0) {
-				Vector3 originalPosition = new Vector3(0.5f,1.1f,200); 
-				Vector3 originalRotation = new Vector3(0,90,0);
-				player.transform.position = originalPosition;
-		       	player.transform.eulerAngles = originalRotation;
-				context = "'ambiguous_reward'";
-				all_trial_num=all_trial_num+1;
-				audio.loop=true;
-				audio.clip=s_reward;
-				audio.Play ();
-				audio.volume = 1;
-			}
-			else if (nextpos ==1) {
-				Vector3 originalPosition = new Vector3(0.5f,1.1f,0);
-				Vector3 originalRotation = new Vector3(0,90,0);
-				player.transform.position = originalPosition;
-		        player.transform.eulerAngles = originalRotation;
-				context = "'ambiguous_restart'";
-				all_trial_num=all_trial_num+1;
-				audio.loop=true;
-				audio.clip=s_restart;
-				audio.Play ();
-				audio.volume = 1;
-			}
-		}
-		
 		runningtrialtime=0;	
 	}
 	
 	// Update is called once per frame
 	void Update () {
 		runningtrialtime=runningtrialtime+Time.deltaTime;
+		//print (ambiguousflag);
 		print (all_trial_num);
 		
-		if (morphflag == true && nextmaze !=4){
-			if (lastmazeflag == true){
-				// fade out starting volume
-				audio.volume = 0.7F;
+		if (ambiguousflag == true){
+			if (lastmazeflag == true){ // if the previous maze was also reward context
+				// volume of main sound
+				audio.volume = 1F-Transparent_Reward.otherAlpha;
 			}
-			else if (lastmazeflag == false){
-				// fade in
+			else if (lastmazeflag == false){ // if the previous maze was restart context
+				// volume of other sound (if restart_ambiguous)
 				if (player.transform.position.z <100 && firstplayflag == true) {
 					audio.loop=true;
 					audio.clip=s_reward;
 					audio.Play ();
-					audio.volume=0.3F;
+					audio.volume=Transparent_Reward.otherAlpha;
 					firstplayflag=false;
+					//print(audio.volume);
 				}
 				else if (player.transform.position.z <100 && firstplayflag == false) {
-					audio.volume=0.3F;
+					// volume of other sound (if restart_ambiguous)
+					audio.volume=Transparent_Reward.otherAlpha;
 				}
-				//fade in
+				// volume of other sound (if reward_ambiguous)
 				else if (player.transform.position.z > 100 && firstplayflag == true) {
 					audio.loop=true;
 					audio.clip=s_restart;
 					audio.Play ();
-					audio.volume=0.3F;
+					audio.volume=Transparent_Reward.otherAlpha;
 					firstplayflag = false;
+					//print(audio.volume);
 				}
 				else if (player.transform.position.z > 100 && firstplayflag == false) {
-					audio.volume=0.3F;
-				}
-			}
-		}
-		
-		else if (morphflag == true && nextmaze ==4){
-			if (lastmazeflag == true){
-				// fade out starting volume
-				audio.volume = 0.5F;
-			}
-			else if (lastmazeflag == false){
-				// fade in
-				if (player.transform.position.z <100 && firstplayflag == true) {
-					audio.loop=true;
-					audio.clip=s_reward;
-					audio.Play ();
-					audio.volume=0.5F;
-					firstplayflag=false;
-				}
-				else if (player.transform.position.z <100 && firstplayflag == false) {
-					audio.volume=0.5F;
-				}
-				//fade in
-				else if (player.transform.position.z > 100 && firstplayflag == true) {
-					audio.loop=true;
-					audio.clip=s_restart;
-					audio.Play ();
-					audio.volume=0.5F;
-					firstplayflag = false;
-				}
-				else if (player.transform.position.z > 100 && firstplayflag == false) {
-					audio.volume=0.5F;
+					// volume of restart sound (if reward_ambiguous)
+					audio.volume=Transparent_Reward.otherAlpha;
 				}
 			}
 		}
 		
 		if (outcome == "'restart'") {
 			audio.Stop ();
+			firstplayflag = true;
 		}
 		
 		if (outcome == "'correct'") {

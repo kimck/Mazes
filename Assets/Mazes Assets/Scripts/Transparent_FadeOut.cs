@@ -16,8 +16,8 @@ public class Transparent_FadeOut : MonoBehaviour {
     void Update() {
 		
 		if (LTrack_RewardTrigger_Morphing.morphflag == true){
-			//newAlpha = (133.3333F-player.transform.position.x)/133.3333F;
-			newAlpha = (66.66667F-player.transform.position.x)/66.66667F;
+			newAlpha = (133.3333F-player.transform.position.x)/133.3333F;
+			//newAlpha = (66.66667F-player.transform.position.x)/66.66667F;
 		}
 		else if (LTrack_RewardTrigger_Morphing.morphflag == false){
 			//newAlpha=(133.3333F-0.5F)/133.3333F;

@@ -76,10 +76,10 @@
      <Compile Include="Assets\Mazes Assets\Scripts\Stimulus.cs" />
      <Compile Include="Assets\Mazes Assets\Scripts\StimulusRestart.cs" />
      <Compile Include="Assets\Mazes Assets\Scripts\Transparent.cs" />
-     <Compile Include="Assets\Mazes Assets\Scripts\Transparent_30.cs" />
-     <Compile Include="Assets\Mazes Assets\Scripts\Transparent_70.cs" />
      <Compile Include="Assets\Mazes Assets\Scripts\Transparent_FadeIn.cs" />
      <Compile Include="Assets\Mazes Assets\Scripts\Transparent_FadeOut.cs" />
+     <Compile Include="Assets\Mazes Assets\Scripts\Transparent_Restart.cs" />
+     <Compile Include="Assets\Mazes Assets\Scripts\Transparent_Reward.cs" />
      <None Include="Assets\Resources\SyphonShaders\Particle AddSmooth.shader" />
      <None Include="Assets\Resources\SyphonShaders\AlphaTest-BumpSpec01.shader" />
      <None Include="Assets\Resources\SyphonShaders\Particle AddBehind.shader" />

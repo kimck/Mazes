@@ -20,9 +20,14 @@ public class LTrack_RewardTrigger_Morphing : MonoBehaviour {
 	// For imaging with morphing/switching
 	public static int all_trial_num=0;
 	public int currentrun = 1;
-	public int[] run1 = {0,0,3,1,1,2,0,3,0,1,2,1,0,3,1,0,1,2,0,3,1,1,0,1,2,0,3,0,1,2};
+	
+	public int[] run1 = {0,0,3,1,1,2,0,3,0,1,2,1,0,3,1,0,1,2,0,3,1,1,0,1,2,0,3,0,1,2,1,2,0,3,0,1,2,1,0,1,3,0,2,0,1,3,1,2,0,1,3,1,0,2,1,0,1,0,3,0,0,1,2,1,0,3,0,1,2,0,1,0,3,1,2,1,0,3,0,1,2,0,1,3,0,2,0,3,1,1};
 	public int[] run2 = {1,2,0,3,0,1,2,1,0,1,3,0,2,0,1,3,1,2,0,1,3,1,0,2,1,0,1,0,3,0};
 	public int[] run3 = {0,1,2,1,0,3,0,1,2,0,1,0,3,1,2,1,0,3,0,1,2,0,1,3,0,2,0,3,1,1};
+	
+//	public int[] run1 = {0,0,3,1,1,2,0,3,0,1,2,1,0,3,1,0,1,2,0,3,1,1,0,1,2,0,3,0,1,2};
+//	public int[] run2 = {1,2,0,3,0,1,2,1,0,1,3,0,2,0,1,3,1,2,0,1,3,1,0,2,1,0,1,0,3,0};
+//	public int[] run3 = {0,1,2,1,0,3,0,1,2,0,1,0,3,1,2,1,0,3,0,1,2,0,1,3,0,2,0,3,1,1};
 	
 	// Use this for initialization
 	void Start () {
@@ -194,8 +199,8 @@ public class LTrack_RewardTrigger_Morphing : MonoBehaviour {
 		if (morphflag == true){
 			if (lastmazeflag == true){
 				// fade out starting volume
-				audio.volume = (66.6667F-player.transform.position.x)/66.6667F;
-				//audio.volume = (66.66667F-player.transform.position.x)/66.66667F;
+				//audio.volume = (66.6667F-player.transform.position.x)/66.6667F;
+				audio.volume = (133.3333F-player.transform.position.x)/133.3333F;
 			}
 			else if (lastmazeflag == false){
 				// fade in
@@ -203,22 +208,26 @@ public class LTrack_RewardTrigger_Morphing : MonoBehaviour {
 					audio.loop=true;
 					audio.clip=s_reward;
 					audio.Play ();
-					audio.volume=(player.transform.position.x)/66.6667F;
+					audio.volume=(player.transform.position.x)/133.3333F;
+					//audio.volume=(player.transform.position.x)/66.6667F;
 					firstplayflag=false;
 				}
 				else if (player.transform.position.z <100 && firstplayflag == false) {
-					audio.volume=(player.transform.position.x)/66.6667F;
+					audio.volume=(player.transform.position.x)/133.3333F;
+					//audio.volume=(player.transform.position.x)/66.6667F;
 				}
 				//fade in
 				else if (player.transform.position.z > 100 && firstplayflag == true) {
 					audio.loop=true;
 					audio.clip=s_restart;
 					audio.Play ();
-					audio.volume=(player.transform.position.x)/66.6667F;
+					audio.volume=(player.transform.position.x)/133.3333F;
+					//audio.volume=(player.transform.position.x)/66.6667F;
 					firstplayflag = false;
 				}
 				else if (player.transform.position.z > 100 && firstplayflag == false) {
-					audio.volume=(player.transform.position.x)/66.6667F;
+					audio.volume=(player.transform.position.x)/133.3333F;
+					//audio.volume=(player.transform.position.x)/66.6667F;
 				}
 			}
 		}
